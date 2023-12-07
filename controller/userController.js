@@ -5,8 +5,9 @@ const User = require('../models/userModel')
 
 const profile = async(req,res)=>{
     try {
-     const userDetail = req.user
-    res.send(userDetail)
+        console.log("Aa");
+    //  const userDetail = req.user
+    // res.send(userDetail)
     } catch (error) {
         console.log(error);
     }
@@ -56,7 +57,7 @@ const signup =async (req,res)=>{
      data.password =await hashPassword(data.password)
 
      User.create(data)
-    const token =await generateToken(data)
+    const token =await generateToken(isExist)
     res.status(200).json({success:true,msg:"Register Successfully", token:token})
 
 }

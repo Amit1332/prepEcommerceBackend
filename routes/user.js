@@ -6,7 +6,7 @@ const {auth}  = require('../middlewares/auth')
 
 
 
-Router.get('/',auth,profile)
+Router.get('/loaduser',profile)
 
 Router.post('/login',login)
 
