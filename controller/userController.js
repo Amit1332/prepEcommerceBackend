@@ -4,8 +4,12 @@ const User = require('../models/userModel')
 
 
 const profile = async(req,res)=>{
-    const userDetail = req.user
+    try {
+     const userDetail = req.user
     res.send(userDetail)
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 

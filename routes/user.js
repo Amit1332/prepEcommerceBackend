@@ -1,12 +1,12 @@
 
 const Router =require('express').Router()
-const { login, signup } = require('../controller/userController')
+const { login, signup, profile } = require('../controller/userController')
 const {auth}  = require('../middlewares/auth')
 
 
 
 
-Router.get('/',auth)
+Router.get('/',auth,profile)
 
 Router.post('/login',login)
 
