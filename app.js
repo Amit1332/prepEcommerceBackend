@@ -13,6 +13,7 @@ dotenv.config()
 app.use(cors({
     origin:'*'
 }))
+
 app.use('/api/v1/',routes)
 app.get('/api/v1/config/paypal',(req,res)=>{
     res.send(process.env.PAYPAL_CLIENT_ID)
