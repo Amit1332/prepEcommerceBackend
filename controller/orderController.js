@@ -19,7 +19,7 @@ const checkout = async(req,res)=>{
             mode:"payment",
             line_items:lineItems,
         })
-        res.json({id:session.id})
+        res.json({success:true,id:session.id})
         
     } catch (error) {
       console.log(error);
