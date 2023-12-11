@@ -18,8 +18,6 @@ const checkout = async(req,res)=>{
             payment_method_types:['card'],
             mode:"payment",
             line_items:lineItems,
-            success_url:"https://lukeecommprep.netlify.app/payment/success",
-            cancel_url:"https://lukeecommprep.netlify.app/payment/cancel"
         })
         res.json({id:session.id})
         
