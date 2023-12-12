@@ -1,5 +1,4 @@
 const {hashPassword,generateToken, comparePassword} = require('../middlewares/middleware')
-const {auth}  = require('../middlewares/auth')
 const User = require('../models/userModel')
 
 
