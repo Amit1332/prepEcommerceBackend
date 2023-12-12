@@ -17,8 +17,8 @@ const comparePassword =async (password,storePassword)=>{
     }
 }
 
-const generateToken = async(email)=>{
-   const token  = await jwt.sign({user:email},process.env.SECRET_KEY,{expiresIn:process.env.expires_at*24*60*60*100})
+const generateToken = async(data)=>{
+   const token  = await jwt.sign({user:data},process.env.SECRET_KEY,{expiresIn:process.env.expires_at*24*60*60*100})
     return token
 }
 
