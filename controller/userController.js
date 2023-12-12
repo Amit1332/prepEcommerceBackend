@@ -5,6 +5,7 @@ const User = require('../models/userModel')
 const profile = async(req,res)=>{
     try {
      const userDetail = req.user
+     console.log(userDetail);
     res.send(userDetail)
     } catch (error) {
         console.log(error);
@@ -26,7 +27,7 @@ const login =async (req,res)=>{
     const checkPass =await comparePassword(data.password,userData.password)
 
     if(checkPass){
-    const token =await generateToken(data)
+    const token =await generateToken(userData)
     return res.status(200).json({success:true,msg:"Login Successfully", token:token})
 
     }
