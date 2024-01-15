@@ -56,7 +56,7 @@ const signup =async (req,res)=>{
      data.password =await hashPassword(data.password)
 
      User.create(data)
-    const token =await generateToken(isExist)
+    const token =await generateToken(data)
     res.status(200).json({success:true,msg:"Register Successfully", token:token})
 
 }
