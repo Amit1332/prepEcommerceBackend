@@ -23,7 +23,6 @@ Router.get('/category/:catId',PoductByCatId)
 
 Router.post('/filter/product',filterProduct)
 
-
 module.exports=Router
 
 

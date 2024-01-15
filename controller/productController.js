@@ -63,12 +63,11 @@ const createProduct = async(req,res)=>{
 
 const filterProduct = async(req,res)=>{
     try {
-        const { brand, color, priceRange, childCategory } = req.body;
-        const filter = {};
+        const { brand, color, priceRange, childCategory ,catId} = req.body;
+        const filter = {categoryId:catId};
         if (brand && brand.length > 0) {
             filter.brand = { $in: brand };
           }
-      
           if (color && color.length > 0) {
             filter.color = { $in: color };
           }
